@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radar Candidatures</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body class="popup">
+  <header class="popup-header">
+    <a class="brand" href="dashboard.html" target="_blank" rel="noopener">
+      <img src="icons/radar-48.png" width="32" height="32" alt="">
+      <span>Radar Candidatures</span>
+    </a>
+    <a class="icon-button settings-link" href="dashboard.html#choix" target="_blank" rel="noopener" aria-label="Configurer mes choix" title="Configurer mes choix">
+      Mes choix
+    </a>
+  </header>
+  <main class="popup-main">
+    <div class="current-offer" id="current-offer" hidden>
+      <span class="site" id="site"></span>
+      <p id="page-title"></p>
+    </div>
+    <section id="capture" aria-labelledby="capture-title" hidden>
+      <h1 id="capture-title">Enregistrer l’offre comme…</h1>
+      <div class="choices" id="choices"></div>
+    </section>
+    <p class="popup-feedback" id="feedback" role="status" aria-live="polite"></p>
+    <section class="weekly" id="weekly" aria-label="Cette semaine" hidden>
+      <div class="weekly-head">
+        <span>Cette semaine</span>
+        <strong id="week-count"></strong>
+      </div>
+      <progress id="week-progress" value="0" max="5" aria-label="Objectif de candidatures envoyées"></progress>
+    </section>
+  </main>
+  <footer class="popup-footer">
+    <a href="dashboard.html" target="_blank" rel="noopener">Mes candidatures <span aria-hidden="true">→</span></a>
+  </footer>
+</body>
+</html>

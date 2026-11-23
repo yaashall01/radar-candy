@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes candidatures · Radar</title>
+  <link rel="icon" href="icons/radar-32.png">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="dashboard.js"></script>
+</head>
+<body class="dashboard">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="dashboard.html">
+        <img src="icons/radar-48.png" width="36" height="36" alt="">
+        <span>Radar Candidatures</span>
+      </a>
+      <button class="secondary-button" id="open-settings" type="button" disabled>Configurer mes choix</button>
+    </div>
+  </header>
+  <main class="dashboard-main">
+    <h1>Mes candidatures</h1>
+    <section class="dashboard-week" id="week" aria-label="Objectif de la semaine" hidden>
+      <div class="week-copy">
+        <span>Cette semaine</span>
+        <strong id="week-count"></strong>
+      </div>
+      <progress id="week-progress" value="0" max="5" aria-label="Objectif de candidatures envoyées"></progress>
+    </section>
+    <section class="offer-list" aria-labelledby="list-title">
+      <header class="list-header">
+        <h2 id="list-title">Offres enregistrées <span id="total"></span></h2>
+        <label class="filter" id="filter" hidden>
+          <span class="sr-only">Filtrer par statut</span>
+          <select id="choice-filter"></select>
+        </label>
+      </header>
+      <p class="list-feedback" id="list-feedback" role="status"></p>
+      <p class="empty" id="empty" hidden></p>
+      <div class="table-wrap" id="table-wrap" hidden>
+        <table>
+          <thead>
+            <tr><th scope="col">Offre</th><th scope="col">Statut</th><th scope="col">Enregistrée le</th><th scope="col"><span class="sr-only">Actions</span></th></tr>
+          </thead>
+          <tbody id="offers"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <dialog id="settings" aria-labelledby="settings-title">
+    <form id="settings-form">
+      <header class="dialog-header">
+        <h2 id="settings-title">Mes choix rapides</h2>
+        <p>Ces boutons apparaissent quand tu ouvres l’extension.</p>
+      </header>
+      <div class="settings-body">
+        <div id="choice-fields"></div>
+        <button class="secondary-button add-choice" id="add-choice" type="button">＋ Ajouter un choix</button>
+        <label class="goal">
+          <span>Objectif de candidatures par semaine</span>
+          <input name="goal" type="number" min="1" max="999" required>
+        </label>
+        <p class="list-feedback" id="settings-feedback" role="status"></p>
+      </div>
+      <footer class="dialog-footer">
+        <button class="secondary-button" id="close-settings" type="button">Annuler</button>
+        <button class="primary-button" id="save-settings" type="submit">Enregistrer mes choix</button>
+      </footer>
+    </form>
+  </dialog>
+</body>
+</html>

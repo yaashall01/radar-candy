@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Radar Candidatures",
+  "version": "1.0.0",
+  "description": "Enregistre l’offre ouverte en un clic avec tes propres choix.",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_title": "Radar Candidatures",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/radar-16.png",
+      "32": "icons/radar-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/radar-16.png",
+    "32": "icons/radar-32.png",
+    "48": "icons/radar-48.png",
+    "128": "icons/radar-128.png"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "options_ui": {
+    "page": "dashboard.html#choix",
+    "open_in_tab": true
+  }
+}

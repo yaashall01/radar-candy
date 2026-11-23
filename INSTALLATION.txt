@@ -1,0 +1,17 @@
+RADAR CANDIDATURES
+
+1. Décompresse le ZIP.
+2. Dans Chrome, ouvre chrome://extensions et active le mode développeur.
+3. Clique sur « Charger l’extension non empaquetée » et sélectionne le
+   dossier radar-candidatures, celui qui contient manifest.json.
+4. Dans le menu Extensions de Chrome, épingle Radar Candidatures.
+
+Ouvre une offre d’emploi, clique sur l’icône Radar et sélectionne un
+choix. Le titre et le lien de l’onglet sont enregistrés avec ce statut.
+
+« Mes choix » ouvre les réglages des choix rapides. Tu peux renommer, ajouter
+ou retirer des choix et définir ceux qui comptent comme candidature
+envoyée. Le compteur hebdomadaire se base sur la première date à
+laquelle une offre a reçu un choix qui compte comme envoyée.
+
+Les offres et choix sont conservés dans le stockage local de Chrome.
